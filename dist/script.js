@@ -2045,9 +2045,18 @@ function () {
     this.btnBlock.addEventListener('click', function (e) {
       return _this.onScaleChange(e);
     });
+    this.colorPicker.addEventListener('input', function (e) {
+      return _this.onColorChange(e);
+    });
   }
 
   _createClass(Customizator, [{
+    key: "onColorChange",
+    value: function onColorChange(e) {
+      var body = document.querySelector('body');
+      body.style.backgroundColor = e.target.value;
+    }
+  }, {
     key: "onScaleChange",
     value: function onScaleChange(e) {
       var scale;
